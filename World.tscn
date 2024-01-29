@@ -1,0 +1,134 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://JimJamTime/FrolfCourse.png" type="Texture" id=1]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Crosshair.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FrogInHole.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ShantellSans-Medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://blue_button13.png" type="Texture" id=6]
+[ext_resource path="res://blue_button03.png" type="Texture" id=7]
+[ext_resource path="res://World.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 996, 535, 982, 540, 964, 523, 681, 358, 542, 11, 547, 1, 611, -10, 635, -8, 647, -2, 701, 344, 65, 334, 48, 282, 51, 234, 65, 180, 82, 138, 96, 134, 216, 398, 184, 402, 134, 396, 102, 379, 86, 370, 726, 349, 848, -3, 856, -12, 910, -17, 959, -9, 328, 68, 349, 44, 374, 19, 403, 18, 426, 25, 427, 395, 372, 397, 316, 398, 252, 397, 1116, 472, 1013, 530, 953, 506, 947, 493, 940, 486, 1138, 444, 1174, 368, 1163, 405, 1152, 429, 926, 479, 1169, 341, 1167, 312, 905, 475, 889, 468, 877, 456, 872, 444, 872, 431, 1178, 264, 869, 427, 1178, 227, 1123, 121, 1145, 138, 1165, 155, 1175, 179, 1181, 201, 835, 409, 1099, 104, 811, 397, 789, 379, 778, 368, 1028, -3, 1052, 0, 1078, 16, 1103, 76, 748, 358, 832, -5, 809, 7, 783, 18, 762, 13, 735, 3, 683, -8, 710, -8, 517, 16, 501, 22, 467, 28, 675, 374, 665, 388, 655, 406, 639, 427, 621, 451, 602, 466, 581, 467, 561, 456, 538, 428, 513, 414, 480, 399, 440, 24, 302, 62, 103, 104, 134, 69, 183, 52, 212, 47, 262, 52 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 9 ), PoolIntArray( 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24, 25 ), PoolIntArray( 26, 27, 28, 29, 30, 31, 32, 33, 34 ), PoolIntArray( 35, 36, 0, 2, 37, 38 ), PoolIntArray( 35, 38, 39, 40 ), PoolIntArray( 41, 42, 43, 40, 39, 44, 45 ), PoolIntArray( 46, 45, 44, 47, 48, 49, 50, 51 ), PoolIntArray( 52, 46, 51, 53, 54 ), PoolIntArray( 55, 56, 57, 58, 59, 54, 53, 60, 61 ), PoolIntArray( 61, 60, 62, 63, 64 ), PoolIntArray( 65, 66, 67, 68, 61, 64, 69, 21, 25 ), PoolIntArray( 70, 22, 21, 71 ), PoolIntArray( 72, 71, 21, 9 ), PoolIntArray( 73, 72, 9 ), PoolIntArray( 74, 73, 9 ), PoolIntArray( 75, 76, 74, 9, 8 ), PoolIntArray( 77, 4, 3, 78 ), PoolIntArray( 79, 78, 3, 80, 81 ), PoolIntArray( 79, 81, 82, 83 ), PoolIntArray( 79, 83, 84, 85, 86, 87, 88 ), PoolIntArray( 79, 88, 89 ), PoolIntArray( 79, 89, 90 ), PoolIntArray( 91, 79, 90, 31, 30 ), PoolIntArray( 92, 26, 34 ), PoolIntArray( 93, 94, 95, 96, 97, 92, 34, 16, 15 ) ]
+outlines = [ PoolVector2Array( 639, 427, 621, 451, 602, 466, 581, 467, 561, 456, 538, 428, 513, 414, 480, 399, 427, 395, 372, 397, 316, 398, 252, 397, 216, 398, 184, 402, 134, 396, 102, 379, 86, 370, 65, 334, 48, 282, 51, 234, 65, 180, 82, 138, 96, 134, 103, 104, 134, 69, 183, 52, 212, 47, 262, 52, 302, 62, 328, 68, 349, 44, 374, 19, 403, 18, 426, 25, 440, 24, 467, 28, 501, 22, 517, 16, 542, 11, 547, 1, 611, -10, 635, -8, 647, -2, 683, -8, 710, -8, 735, 3, 762, 13, 783, 18, 809, 7, 832, -5, 848, -3, 856, -12, 910, -17, 959, -9, 1028, -3, 1052, 0, 1078, 16, 1103, 76, 1099, 104, 1123, 121, 1145, 138, 1165, 155, 1175, 179, 1181, 201, 1178, 227, 1178, 264, 1167, 312, 1169, 341, 1174, 368, 1163, 405, 1152, 429, 1138, 444, 1116, 472, 1013, 530, 996, 535, 982, 540, 964, 523, 953, 506, 947, 493, 940, 486, 926, 479, 905, 475, 889, 468, 877, 456, 872, 444, 872, 431, 869, 427, 835, 409, 811, 397, 789, 379, 778, 368, 748, 358, 726, 349, 701, 344, 681, 358, 675, 374, 665, 388, 655, 406 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 738, 401, 769, 409, 781, 415, 795, 427, 811, 442, 817, 454, 818, 465, 815, 484, 806, 497, 791, 506, 772, 513, 760, 512, 732, 504, 713, 489, 705, 475, 698, 452, 704, 425, 709, 411, 721, 402 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ) ]
+outlines = [ PoolVector2Array( 738, 401, 769, 409, 781, 415, 795, 427, 811, 442, 817, 454, 818, 465, 815, 484, 806, 497, 791, 506, 772, 513, 760, 512, 732, 504, 713, 489, 705, 475, 698, 452, 704, 425, 709, 411, 721, 402 ) ]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="FrolfCourse" type="Sprite" parent="."]
+position = Vector2( 614, 300 )
+texture = ExtResource( 1 )
+
+[node name="ItemContainer" type="Node" parent="."]
+
+[node name="FrogInHole" parent="." instance=ExtResource( 4 )]
+position = Vector2( 926, 91 )
+scale = Vector2( 0.24, 0.24 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 238, 184 )
+offset = Vector2( 300, 0 )
+current = true
+zoom = Vector2( 3.5, 3.5 )
+smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="AccuracyBar" type="TextureProgress" parent="Camera2D/CanvasLayer"]
+visible = false
+margin_left = 65.0
+margin_top = 128.0
+margin_right = 255.0
+margin_bottom = 177.0
+rounded = true
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 7 )
+
+[node name="Player" type="Label" parent="Camera2D/CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="Turn" type="Label" parent="Camera2D/CanvasLayer"]
+margin_left = 184.0
+margin_top = 1.0
+margin_right = 224.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="Crosshair" parent="." instance=ExtResource( 3 )]
+position = Vector2( 202, 167 )
+
+[node name="Rough" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rough"]
+polygon = PoolVector2Array( 676, 273, 668, 262, 672, 218, 668, 206, 634, 191, 630, 165, 635, 145, 647, 144, 655, 130, 656, 116, 622, 102, 610, 83, 616, 60, 634, 46, 660, 40, 711, 37, 748, 53, 772, 73, 769, 92, 755, 124, 743, 142, 758, 156, 766, 169, 768, 185, 760, 202, 748, 216, 754, 228, 762, 251, 761, 273, 743, 285, 718, 284 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Rough"]
+polygon = PoolVector2Array( 758, 426, 758, 442, 743, 444, 741, 450, 738, 460, 743, 471, 747, 476, 752, 479, 756, 480, 752, 499, 739, 495, 730, 490, 725, 481, 724, 476, 717, 468, 714, 458, 716, 447, 722, 437, 728, 430, 735, 424, 747, 421, 751, 423 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Rough"]
+position = Vector2( 1514, 923 )
+rotation = 3.14159
+polygon = PoolVector2Array( 761, 424, 758, 442, 746, 446, 743, 450, 739, 459, 743, 471, 747, 476, 752, 479, 756, 480, 755, 499, 739, 495, 730, 490, 725, 481, 724, 476, 717, 468, 714, 458, 716, 447, 722, 437, 728, 430, 735, 424, 747, 421, 752, 420 )
+
+[node name="Grass" type="StaticBody2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 206, 213, 291, 280, 316, 298, 352, 289, 394, 290, 451, 311, 495, 327, 523, 350, 557, 372, 577, 368, 631, 409, 643, 419, 629, 444, 607, 463, 589, 467, 566, 463, 547, 445, 531, 431, 515, 420, 497, 405, 438, 402, 352, 401, 276, 400, 226, 397, 163, 401, 131, 389, 106, 378, 77, 352, 51, 288, 55, 233, 67, 181, 77, 149, 92, 134, 109, 99, 143, 64, 192, 48, 238, 52, 288, 58, 272, 92, 238, 129, 226, 123, 205, 114, 177, 123, 160, 140, 154, 154, 154, 172, 163, 195, 180, 212 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 234, 130, 243, 148, 244, 168, 237, 192, 221, 212, 211, 216, 248, 244, 282, 273, 290, 276, 295, 262, 304, 245, 311, 225, 326, 210, 361, 202, 398, 209, 405, 212, 457, 221, 504, 240, 521, 256, 533, 267, 557, 271, 593, 287, 601, 316, 594, 343, 582, 366, 609, 388, 623, 401, 643, 419, 664, 394, 674, 371, 691, 350, 712, 346, 718, 346, 715, 310, 716, 282, 673, 273, 665, 254, 671, 223, 665, 207, 639, 198, 625, 172, 631, 153, 647, 137, 653, 128, 646, 113, 620, 100, 611, 91, 609, 73, 615, 57, 633, 44, 664, 38, 700, 37, 710, -4, 689, -7, 680, -2, 656, -4, 628, -9, 578, -5, 545, 1, 543, 7, 511, 15, 500, 21, 482, 26, 466, 26, 447, 19, 437, 25, 408, 19, 383, 18, 365, 27, 347, 49, 337, 60, 332, 66, 318, 65, 308, 63, 300, 60, 292, 60, 278, 82, 262, 104 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 713, -6, 702, 35, 750, 57, 767, 63, 773, 84, 760, 114, 748, 137, 756, 150, 775, 170, 774, 192, 748, 211, 755, 226, 761, 249, 762, 267, 747, 282, 730, 291, 719, 289, 720, 344, 768, 361, 792, 382, 829, 405, 855, 419, 871, 427, 877, 452, 895, 471, 940, 483, 970, 527, 990, 538, 1036, 519, 1087, 489, 1124, 467, 1148, 435, 1131, 409, 1086, 364, 1058, 338, 1046, 368, 1025, 375, 996, 362, 987, 343, 991, 319, 1003, 299, 1019, 293, 995, 253, 973, 202, 949, 155, 923, 143, 892, 134, 865, 99, 863, 68, 882, 42, 905, 36, 933, 35, 934, -1, 934, -13, 887, -13, 861, -11, 851, -1, 833, -5, 808, 12, 791, 21, 752, 12 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 934, -13, 934, 35, 972, 40, 993, 56, 1004, 77, 1007, 112, 991, 125, 960, 142, 943, 149, 1016, 289, 1017, 269, 1032, 252, 1049, 246, 1072, 244, 1091, 257, 1108, 273, 1107, 306, 1098, 322, 1092, 339, 1067, 341, 1109, 380, 1140, 417, 1149, 433, 1163, 416, 1172, 367, 1170, 333, 1173, 288, 1180, 253, 1176, 236, 1178, 209, 1183, 187, 1165, 151, 1129, 130, 1101, 102, 1102, 84, 1092, 46, 1072, 19, 1054, 2, 988, -6 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 724, 426, 739, 421, 753, 421, 771, 425, 786, 438, 799, 459, 793, 485, 781, 501, 760, 504, 762, 513, 789, 508, 813, 489, 819, 465, 810, 443, 797, 431, 776, 414, 740, 402, 719, 404, 710, 411 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Grass"]
+polygon = PoolVector2Array( 709, 412, 725, 428, 718, 443, 712, 457, 720, 479, 734, 493, 750, 500, 760, 502, 761, 510, 735, 504, 717, 493, 707, 480, 700, 461, 700, 440 )
+
+[node name="Fairway" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Fairway"]
+polygon = PoolVector2Array( 743, 444, 753, 442, 759, 443, 767, 448, 771, 451, 775, 458, 771, 472, 764, 479, 755, 480, 745, 474, 742, 466, 739, 458 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fairway"]
+polygon = PoolVector2Array( 167, 133, 182, 123, 195, 119, 222, 125, 236, 138, 239, 155, 239, 176, 234, 196, 221, 206, 205, 211, 187, 208, 165, 191, 159, 173, 159, 153 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Fairway"]
+polygon = PoolVector2Array( 327, 212, 366, 204, 385, 205, 397, 210, 400, 215, 430, 218, 458, 226, 486, 236, 508, 251, 520, 262, 532, 272, 560, 274, 582, 281, 594, 299, 592, 323, 588, 348, 585, 360, 568, 367, 554, 369, 527, 352, 513, 340, 499, 326, 471, 317, 445, 307, 425, 297, 409, 288, 405, 291, 385, 287, 360, 288, 327, 292, 313, 295, 299, 281, 296, 267, 301, 259, 303, 246, 312, 227 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Fairway"]
+polygon = PoolVector2Array( 1004, 304, 1021, 296, 1019, 285, 1020, 269, 1037, 252, 1048, 251, 1053, 248, 1062, 245, 1084, 254, 1099, 262, 1108, 280, 1102, 309, 1093, 331, 1083, 339, 1069, 339, 1062, 338, 1057, 339, 1057, 347, 1049, 362, 1043, 368, 1032, 374, 1018, 375, 1004, 365, 994, 354, 990, 335, 990, 324 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Fairway"]
+polygon = PoolVector2Array( 891, 40, 909, 43, 925, 38, 938, 37, 961, 40, 978, 43, 987, 53, 997, 69, 1003, 89, 1004, 111, 985, 128, 962, 140, 941, 147, 927, 144, 904, 134, 885, 125, 877, 109, 869, 97, 867, 83, 873, 63 )
+
+[node name="PortalSpawn" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="PortalSpawn"]
+navpoly = SubResource( 2 )
+
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="PortalSpawn"]
+navpoly = SubResource( 3 )
